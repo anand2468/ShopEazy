@@ -1,13 +1,169 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopEazy</title>
+  
+</head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9;
+  }
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    width: 300px;
+    transition: width 0.3s ease;
+  }
+  
+  .search-container:focus-within {
+    width: 400px;
+  }
+  
+  #search-input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 16px;
+    padding: 10px;
+    background-color: transparent;
+  }
+  
+  #search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    transition: color 0.3s ease;
+  }
+  
+  #search-button:hover {
+    color: #333;
+  }
+  
+  /* Optional: Add animation to the search icon */
+  #search-button svg {
+    transition: transform 0.3s ease;
+  }
+  
+  #search-button:hover svg {
+    transform: scale(1.1);
+
+  }
+  header{
+    display: flex;
+    justify-content: space-between;
+    padding:4px;
+  }
+ 
+  button{
+    align-items: center;
+    background: #FFFFFF;
+    border: 0 solid #E2E8F0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-sizing: border-box;
+    color: #1A202C;
+    display: inline-flex;
+    font-family: Inter, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    height: 56px;
+    justify-content: center;
+    line-height: 24px;
+    overflow-wrap: break-word;
+    padding: 24px;
+    text-decoration: none;
+    width: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+     
+    h1{
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+  
+.logo-scroll-container {
+  width: 100%;
+  overflow: hidden; 
+  white-space: nowrap; /* Prevent logos from wrapping */
+  background-color: #f0f0f0; /* Optional: Add background color */
+}
+
+/* Logo scrolling wrapper */
+.logo-scroll {
+  display: inline-block;
+  animation: scroll 10s linear infinite; /* Adjust time for speed */
+}
+
+/* Individual logo styling */
+.logo-scroll img {
+  height: 50px; /* Adjust logo height */
+  margin: 0 20px; /* Add spacing between logos */
+}
+
+/* Keyframes for scrolling animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(-50%); /* Start from the original position */
+  }
+  100% {
+    transform: translateX(500%); /* Move to the left by 50% */
+  }
+}
+  
+</style>
+<body>
+<header>
+  <div id="title">
+    <h1>$hopEZ</h1>
+  </div>
+    <div id="home">
+      <!-- HTML !-->
+<button class="button-70" role="button">Login</button>
+      <button>About</button>
+  </div>
+</header> 
+<h1><center>Welcome to $hopEZ</center></h1>
+<center><div class="search-container">
+      <input type="text" id="search-input" placeholder="Search...">
+      < <button id="search-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </button>
+    </div>
+    <div></center>
+      
+    </div>
+  </div>
+  <div class="logo-scroll-container">
+    <div class="logo-scroll">
+      <img src="OIP.jpg" alt="Logo 1">
+      <img src="OIP (1).jpg" alt="Logo 2">
+      <img src="unnamed.jpg" alt="Logo 3">
+      <!-- Duplicate the logos for seamless scrolling -->
+      <img src="public/flipkart.jpg" alt="Logo 1">
+      <img src="amazon.jpg" alt="Logo 2">
+      <img src="public/flipkart.jpg" alt="Logo 3">
+    </div>
+  </div>
+</body>
 </html>
